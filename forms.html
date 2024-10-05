@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/challenge.html">Challenge</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/forms.html">Forms</a></li>
+            </ul>
+        </nav> 
+
+        <header>
+            <h1>Reserve Your Room</h1>
+            <h2>Our Reservations Policies</h2>
+        </header>
+
+        <section class="policies">
+            <ul>
+                <li>Check-in time after 3:00pm voids your reservation</li>
+                <li>Check-out time by 11:00am or charges are incurred</li>
+                <li>Breakfast and afternoon tea/snacks included in cost</li>
+                <li>Proof of Covid-19 Vaccaination <strong>required</strong>, Upload images(s) below</li>
+                <li>50% Deposit required at booking</li>
+                <li>Cancellations less than 72 hours ahead of check-in forfeit 50% of deposit</li>
+            </ul>
+        </section>
+
+        <section class="reserve">
+            <form method="post" name="reservation" data-netlify="true">
+                
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                </div>
+
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required> 
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+
+                <div>
+                    <label for="date">Check-in Date</label>
+                    <input type="date" name="inDate" id="inDate" required>
+                </div>
+
+                <div>
+                    <label for="date">Check-out Date</label>
+                    <input type="date" name="outDate" id="outDate" required>
+                </div>
+
+                <div>
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" name="guests" id="guests" min="1" max="4" required>
+                </div>
+
+                <div>
+                    <label for="roomType">Room Type</label>
+                    <select> 
+                        <option disabled hidden selected>Choose One</option>
+                        <option value="oneBed">One Bed Queen</option>
+                        <option lvalue="twoBed">Two Beds Twin</option>
+                        <option lvalue="twoBed">Two Beds Queen</option>
+                    </select>
+                </div>
+
+                <div>
+                    Ocean View (Additional Cost)
+                    <div>
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="ocean" id="yes" value="yes">
+                        <label for="no">No</label>
+                        <input type="radio" name="ocean" id="no" value="no">
+                    </div>
+                </div>
+
+                <div>
+                    List of Allergies and Requests:
+                    <label for="requests"></label>
+                    <textarea id="requests" name="requests"></textarea>
+                </div>
+
+                <div>
+                    <label for="file">Vaccination Proof</label>
+                    <input id="vacinne" type="file" name="vaccine">
+                </div>
+
+                <div>
+                    <label for="terms">I agree to all terms listed above</label>
+                    <input type="checkbox" name="terms" id="terms">
+                </div>
+
+                <div>
+                    <label for="password">Password to return. Your email is the username (9 characters minimum)</label>
+                    <input id="password" type="password" name="password" minlength="9" required>
+
+                </div>
+
+                <div>
+                    <label for="submit">Submit</label>
+                    <input type="submit" name="submit" value="submit">
+                </div>
+
+                <div>
+                    <label for="reset">Reset</label>
+                    <input type="reset" name="reset" value="reset">
+                </div>
+            </form>
+        </section>
+    </div> 
+
+    <small>
+        <footer>
+            &copy;2024 All Hallows Hotel<br>
+            Sleepy Hollow, NY
+        </footer>
+    </small>
+</body>
+</html>
